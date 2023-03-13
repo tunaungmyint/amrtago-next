@@ -9,7 +9,7 @@ const Singleattraction = ({ params }) => {
       `https://amrta-api.vercel.app/place/${attractionid}`
     );
     const attraction = await response.json();
-
+    console.log(attraction);
     setAttraction(attraction);
   }
   useEffect(() => {
@@ -22,7 +22,11 @@ const Singleattraction = ({ params }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-[450px] h-[350px] ">
           <img
-            src={attraction.images[0].pathimages}
+            src={
+              !attraction.images
+                ? "https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                : attraction.images[0].pathimages
+            }
             alt={attraction._id}
             className="w-full h-full p-2"
           />
