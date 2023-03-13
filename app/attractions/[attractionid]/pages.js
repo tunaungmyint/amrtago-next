@@ -8,7 +8,7 @@ const Singleattraction = ({ params }) => {
     const response = await fetch(
       `https://amrta-api.vercel.app/place/${attractionid}`
     );
-    const attraction = await response.json();
+    const { attraction } = await response.json();
     console.log(attraction);
     setAttraction(attraction);
   }

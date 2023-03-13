@@ -1,21 +1,27 @@
-"use client";
-import { useState, useEffect } from "react";
+// "use client";
+// import { useState, useEffect } from "react";
 import Link from "next/link";
 const url = `https://amrta-api.vercel.app/townimage`;
 
-const Town = () => {
-  const [towns, setTowns] = useState([]);
+async function getTowns() {
+  const towns = await fetch(url);
+  return await towns.json();
+}
 
-  async function getTowns() {
-    const response = await fetch(url);
-    const towns = await response.json();
+const Town = async () => {
+  const towns = await getTowns();
+  // const [towns, setTowns] = useState([]);
 
-    setTowns(towns);
-  }
+  // async function getTowns() {
+  //   const response = await fetch(url);
+  //   const towns = await response.json();
 
-  useEffect(() => {
-    getTowns();
-  }, []);
+  //   setTowns(towns);
+  // }
+
+  // useEffect(() => {
+  //   getTowns();
+  // }, []);
   return (
     <div>
       <div>
