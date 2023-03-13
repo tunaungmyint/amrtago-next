@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 import Link from "next/link";
-const url = `https://amrta-api.vercel.app/place/nearbytype/96.0891/21.9588/Place`;
+const url = `http://amrtago.com/place/nearbytype/96.0891/21.9588/Place`;
 
 const Attraction = () => {
   const [attractions, setAttractions] = useState([]);

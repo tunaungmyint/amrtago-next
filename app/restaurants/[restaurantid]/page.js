@@ -22,7 +22,11 @@ const Singlerestaurant = ({ params }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-[450px] h-[350px] ">
           <img
-            src={restaurant.images[0].pathimages}
+            src={
+              !restaurant.images
+                ? "https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                : restaurant.images[0].pathimages
+            }
             alt={restaurant._id}
             className="w-full h-full p-2"
           />

@@ -22,7 +22,11 @@ const Singlehotel = ({ params }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-[450px] h-[350px] ">
           <img
-            src={hotel.images[0].pathimages}
+            src={
+              !hotel.images
+                ? "https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                : hotel.images[0].pathimages
+            }
             alt={hotel._id}
             className="w-full h-full p-2"
           />
