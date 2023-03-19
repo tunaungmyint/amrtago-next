@@ -17,7 +17,7 @@ const Towns = ({ params }) => {
     setPlacetype("Place");
   };
 
-  const url1 = `https://amrta-api.vercel.app/place/getplacebytownbyplacetype/${townname}/${placetype}`;
+  const url1 = `https://amrtago.com/place/getplacebytownbyplacetype/${townname}/${placetype}`;
 
   async function getHotels() {
     const response = await fetch(url1);

@@ -52,7 +52,7 @@
 // export default Attraction;
 
 import Link from "next/link";
-const url = `https://amrta-api.vercel.app/place/nearbytype/96.0891/21.9588/Place`;
+const url = `https://amrtago.com/place/nearbytype/96.0891/21.9588/Place`;
 
 async function getAttractions() {
   const attractions = await fetch(url);

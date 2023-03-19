@@ -50,7 +50,7 @@
 // export default Hotel;
 
 import Link from "next/link";
-const url = `https://amrta-api.vercel.app/place/nearbytype/96.0891/21.9588/Hotel`;
+const url = `https://amrtago.com/place/nearbytype/96.0891/21.9588/Hotel`;
 
 async function getHotels() {
   const hotels = await fetch(url);

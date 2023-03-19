@@ -5,9 +5,7 @@ const Singlehotel = ({ params }) => {
   const hotelid = params.hotelid;
   const [hotel, setHotel] = useState();
   async function getHotel() {
-    const response = await fetch(
-      `https://amrta-api.vercel.app/place/${hotelid}`
-    );
+    const response = await fetch(`https://amrtago.com/place/${hotelid}`);
     const hotel = await response.json();
 
     setHotel(hotel);

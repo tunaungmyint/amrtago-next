@@ -10,7 +10,7 @@ const Restaurants = () => {
     setTown(townref.current.value);
   };
 
-  const url = `https://amrta-api.vercel.app/place/getplacebytownbyplacetype/${town}/Rest`;
+  const url = `https://amrtago.com/place/getplacebytownbyplacetype/${town}/Rest`;
 
   async function getHotels() {
     const response = await fetch(url);

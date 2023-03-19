@@ -1,7 +1,7 @@
 // "use client";
 // import { useState, useEffect } from "react";
 import Link from "next/link";
-const url = `https://amrta-api.vercel.app/townimage`;
+const url = `https://amrtago.com/townimage`;
 
 async function getTowns() {
   const towns = await fetch(url);

@@ -5,9 +5,7 @@ const Singlerestaurant = ({ params }) => {
   const restaurantid = params.restaurantid;
   const [restaurant, setRestaurant] = useState();
   async function getRestaurant() {
-    const response = await fetch(
-      `https://amrta-api.vercel.app/place/${restaurantid}`
-    );
+    const response = await fetch(`https://amrtago.com/place/${restaurantid}`);
     const restaurant = await response.json();
 
     setRestaurant(restaurant);
