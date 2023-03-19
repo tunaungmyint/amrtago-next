@@ -101,7 +101,7 @@ const Towns = ({ params }) => {
               className="w-full h-full p-2"
             />
           </div> */}
-          <div className="lg:col-span-2 px-10">
+          <div className="lg:col-span-2 px-4">
             <h3>{hotel.localize.name[1]}</h3>
             <p>{hotel.localize.description[1]}</p>
             <h5 className="text-green-600 font-bold text-sm">
