@@ -18,7 +18,20 @@ const Singlehotel = ({ params }) => {
   return hotel ? (
     <div className="p-4 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="w-[450px] h-[350px] ">
+        <div className="max-w-[1400px] h-[300px] flex w-full mx-auto overflow-x-scroll no-scrollbar">
+          {hotel.images.map((image) => (
+            <img
+              src={
+                !image
+                  ? "https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                  : image.pathimages
+              }
+              alt={image._id}
+              className="p-2 w-[320px] mx-auto"
+            />
+          ))}
+        </div>
+        {/* <div className="w-[320px] h-[300px] ">
           <img
             src={
               !hotel.images
@@ -28,7 +41,7 @@ const Singlehotel = ({ params }) => {
             alt={hotel._id}
             className="w-full h-full p-2"
           />
-        </div>
+        </div> */}
         <div>
           <h3>{hotel.localize.name[1]}</h3>
           <p>{hotel.localize.description[1]}</p>

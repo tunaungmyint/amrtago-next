@@ -67,7 +67,30 @@ const Towns = ({ params }) => {
 
       {places.map((hotel) => (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-4 mx-auto shadow-md">
-          <div className="max-w-[380px] h-[320px] " key={hotel._id}>
+          <div
+            className="max-w-[1400px] h-[300px] flex w-full mx-auto overflow-x-scroll no-scrollbar"
+            key={hotel._id}
+          >
+            {!hotel.images ? (
+              <img
+                src="https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                alt="hotel._id"
+              />
+            ) : (
+              hotel.images.map((image) => (
+                <img
+                  src={
+                    !image
+                      ? "https://amrtago.sgp1.digitaloceanspaces.com/noitem.jpg"
+                      : image.pathimages
+                  }
+                  alt={image._id}
+                  className="p-2 w-[320px] mx-auto"
+                />
+              ))
+            )}
+          </div>
+          {/* <div className="max-w-[380px] h-[320px] " key={hotel._id}>
             <img
               src={
                 !hotel.images
@@ -77,7 +100,7 @@ const Towns = ({ params }) => {
               alt={hotel._id}
               className="w-full h-full p-2"
             />
-          </div>
+          </div> */}
           <div className="lg:col-span-2 px-10">
             <h3>{hotel.localize.name[1]}</h3>
             <p>{hotel.localize.description[1]}</p>

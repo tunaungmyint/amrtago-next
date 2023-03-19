@@ -68,7 +68,7 @@ const Attractions = () => {
                 className="w-full h-full"
               />
             </div>
-            <div className="lg:col-span-2 px-10">
+            <div className="lg:col-span-2 px-2">
               <h3>{attraction.localize.name[1]}</h3>
               <p>{attraction.localize.description[1]}</p>
               <h5 className="text-green-600 font-bold text-sm">
