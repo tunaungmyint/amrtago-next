@@ -21,7 +21,7 @@ export default function Navbar() {
           </Link>
         </h1>
       </div>
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex ">
         <li>
           <Link href="/">Home </Link>
         </li>

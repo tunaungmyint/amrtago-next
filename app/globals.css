@@ -15,7 +15,7 @@
   body {
   }
   li {
-    @apply p-4 text-lg;
+    @apply p-4 text-lg active:text-orange-700;
   }
   h1 {
     @apply text-3xl md:text-4xl font-bold;

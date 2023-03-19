@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
+import { townname } from "@/utils/townname";
 
 const Attractions = () => {
   const [attractions, setAttractions] = useState([]);
@@ -33,8 +34,16 @@ const Attractions = () => {
           ref={townref}
           placeholder="eg. Yangon or Mandalay"
           autoComplete="on"
+          list="town"
           className="px-4 py-2 mr-2 outline-none text-gray-700  border-b-2 border-green-700"
         />
+
+        <datalist id="town">
+          {townname.map((town) => (
+            <option key={town.id} value={town.name} />
+          ))}
+        </datalist>
+
         <button onClick={handleClick}>Search</button>
         <div className="flex items-center justify-between">
           <h3>{town}</h3>
