@@ -43,4 +43,5 @@ export const townname = [
   { id: 42, name: "Botataung" },
   { id: 43, name: "Lanmadaw" },
   { id: 44, name: "Kyauktada" },
+  { id: 45, name: "Inlay" },
 ];

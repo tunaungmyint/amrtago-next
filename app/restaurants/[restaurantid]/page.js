@@ -28,6 +28,7 @@ const Singlerestaurant = ({ params }) => {
               }
               alt={image._id}
               className="p-2 w-[320px] mx-auto"
+              key={image._id}
             />
           ))}
         </div>
@@ -42,7 +43,7 @@ const Singlerestaurant = ({ params }) => {
             className="w-full h-full p-2"
           />
         </div> */}
-        <div>
+        <div className="mx-4">
           <h3>{restaurant.localize.name[1]}</h3>
           <p>{restaurant.localize.description[1]}</p>
           <h5 className="text-green-600 font-bold text-sm">

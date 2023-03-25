@@ -4,12 +4,13 @@ import Link from "next/link";
 const url = `https://amrtago.com/townimage`;
 
 async function getTowns() {
-  const towns = await fetch(url);
+  const towns = await fetch(url, { cache: "no-store" });
   return await towns.json();
 }
 
 const Town = async () => {
   const towns = await getTowns();
+
   // const [towns, setTowns] = useState([]);
 
   // async function getTowns() {

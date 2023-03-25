@@ -18,7 +18,7 @@ const Singlehotel = ({ params }) => {
   return hotel ? (
     <div className="p-4 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="max-w-[1400px] h-[300px] flex w-full mx-auto overflow-x-scroll no-scrollbar">
+        <div className="max-w-[1400px] h-[300px] flex w-full mx-auto overflow-x-scroll no-scrollbar px-2">
           {hotel.images.map((image) => (
             <img
               src={
@@ -28,6 +28,7 @@ const Singlehotel = ({ params }) => {
               }
               alt={image._id}
               className="p-2 w-[320px] mx-auto"
+              key={image._id}
             />
           ))}
         </div>
@@ -42,7 +43,7 @@ const Singlehotel = ({ params }) => {
             className="w-full h-full p-2"
           />
         </div> */}
-        <div>
+        <div className="mx-2">
           <h3>{hotel.localize.name[1]}</h3>
           <p>{hotel.localize.description[1]}</p>
           <h5 className="text-green-600 font-bold text-sm">
